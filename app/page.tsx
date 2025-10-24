@@ -54,8 +54,8 @@ export default function Home() {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold italic text-gray-700 mb-6 leading-[1.05] tracking-tighter"
             style={{ fontFamily: 'Candara, sans-serif', wordSpacing: '-0.1em' }}
           >
-            How do I <span className="text-[#d44000]">multiply</span> my{" "}
-            <span className="text-[#d44000]">business bandwidth</span>?
+            How do I <span className="text-[#d44000]">multiply</span> my business{" "}
+            <span className="text-[#d44000]">bandwidth</span>?
           </motion.h1>
 
           <motion.p
