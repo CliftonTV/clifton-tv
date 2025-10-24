@@ -1,11 +1,11 @@
 "use client";
 
-import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Clock, MapPin } from "lucide-react";
+import { Mail, MessageSquare, Clock } from "lucide-react";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -65,10 +65,8 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
-      <Navbar />
-
       {/* Hero Section */}
-      <section className="px-4 pt-28 pb-16 md:pt-40 md:pb-24">
+      <section className="px-4 pt-16 pb-16 md:pt-24 md:pb-24">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -305,10 +303,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-4 bg-gray-900 text-gray-400 text-center mt-20">
-        <p>&copy; 2025 Clifton.tv. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

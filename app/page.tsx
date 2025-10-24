@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Zap, TrendingUp, MessageSquare } from "lucide-react";
 import { useState } from "react";
-import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -44,43 +44,43 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
-
-      {/* Hero Section - Minimal Above the Fold */}
-      <section id="hero" className="flex items-center justify-center min-h-screen px-4 -mt-16">
-        <div className="max-w-3xl mx-auto text-center">
+      {/* Hero Section - Pure Minimal */}
+      <section id="hero" className="flex items-center justify-center min-h-screen px-4">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-5xl md:text-7xl font-normal text-gray-900 mb-12 leading-tight tracking-tight"
+            transition={{ duration: 0.8 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-900 mb-16 leading-[1.2] tracking-tight"
+            style={{ fontFamily: 'Candara, sans-serif' }}
           >
-            How do I multiply my business bandwidth?
+            How do I <span className="font-normal italic">multiply</span> my business{" "}
+            <span className="text-[#d44000] font-normal">bandwidth</span>?
           </motion.h1>
 
           {/* Email Capture */}
           <motion.form
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             onSubmit={handleSubmit}
-            className="max-w-xl mx-auto"
+            className="max-w-2xl mx-auto"
           >
             <div className="relative">
               <Input
                 type="email"
-                placeholder="Enter your email to learn more"
+                placeholder="your email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="h-14 text-lg pr-32 border-2 border-gray-300 focus:border-[#d44000]"
+                className="h-16 text-lg px-6 pr-36 border-2 border-gray-300 rounded-full focus:border-[#d44000] focus:ring-0"
               />
               <Button
                 type="submit"
                 size="lg"
                 disabled={isSubmitting}
-                className="absolute right-1 top-1 h-12 px-6 bg-[#d44000] hover:bg-[#b83600]"
+                className="absolute right-2 top-2 h-12 px-8 bg-[#d44000] hover:bg-[#b83600] rounded-full"
               >
                 {isSubmitting ? "..." : "Submit"}
               </Button>
@@ -414,10 +414,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-4 bg-gray-900 text-gray-400 text-center">
-        <p>&copy; 2025 Clifton.tv. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
