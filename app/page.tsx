@@ -46,22 +46,23 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Hero Section - Pure Minimal */}
       <section id="hero" className="flex items-center justify-center min-h-screen px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-[1.2]"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-6 leading-[1.1] tracking-tight"
             style={{ fontFamily: 'Candara, sans-serif' }}
           >
-            How do I multiply my business bandwidth?
+            How do I <span className="text-[#d44000]">multiply</span> my{" "}
+            <span className="text-[#d44000]">business bandwidth</span>?
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed"
             style={{ fontFamily: 'Candara, sans-serif' }}
           >
             Discover how AI and automation can transform your business operations,
