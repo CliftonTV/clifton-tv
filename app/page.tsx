@@ -51,18 +51,28 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-900 mb-16 leading-[1.2] tracking-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-[1.2]"
             style={{ fontFamily: 'Candara, sans-serif' }}
           >
-            How do I <span className="font-normal italic">multiply</span> my business{" "}
-            <span className="text-[#d44000] font-normal">bandwidth</span>?
+            How do I multiply my business bandwidth?
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto"
+            style={{ fontFamily: 'Candara, sans-serif' }}
+          >
+            Discover how AI and automation can transform your business operations,
+            freeing up time and resources to focus on what matters most.
+          </motion.p>
 
           {/* Email Capture */}
           <motion.form
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             onSubmit={handleSubmit}
             className="max-w-2xl mx-auto"
           >
