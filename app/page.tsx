@@ -51,8 +51,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-6 leading-[1.1] tracking-tight"
-            style={{ fontFamily: 'Candara, sans-serif' }}
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold italic text-gray-700 mb-6 leading-[1.05] tracking-tighter"
+            style={{ fontFamily: 'Candara, sans-serif', wordSpacing: '-0.1em' }}
           >
             How do I <span className="text-[#d44000]">multiply</span> my{" "}
             <span className="text-[#d44000]">business bandwidth</span>?
