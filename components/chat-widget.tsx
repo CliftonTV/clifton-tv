@@ -68,7 +68,7 @@ export function ChatWidget() {
           >
             <Button
               onClick={() => setIsOpen(true)}
-              className="h-16 w-16 rounded-full bg-blue-600 hover:bg-blue-700 shadow-lg flex items-center justify-center"
+              className="h-16 w-16 rounded-full bg-[#d44000] hover:bg-[#b83600] shadow-lg flex items-center justify-center"
             >
               <MessageCircle size={28} />
             </Button>
@@ -86,17 +86,17 @@ export function ChatWidget() {
             className="fixed bottom-6 right-6 z-50 w-96 max-w-[calc(100vw-3rem)]"
           >
             <Card className="shadow-2xl border-2">
-              <CardHeader className="bg-blue-600 text-white rounded-t-lg">
+              <CardHeader className="bg-[#d44000] text-white rounded-t-lg">
                 <div className="flex justify-between items-center">
                   <CardTitle className="text-lg">Chat with Us</CardTitle>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="hover:bg-blue-700 p-1 rounded"
+                    className="hover:bg-[#b83600] p-1 rounded"
                   >
                     <X size={20} />
                   </button>
                 </div>
-                <p className="text-sm text-blue-100 mt-1">
+                <p className="text-sm text-[#fff5f0] mt-1">
                   Typically responds instantly
                 </p>
               </CardHeader>
@@ -111,7 +111,7 @@ export function ChatWidget() {
                       <div
                         className={`max-w-[80%] p-3 rounded-lg ${
                           msg.role === "user"
-                            ? "bg-blue-600 text-white"
+                            ? "bg-[#d44000] text-white"
                             : "bg-white text-gray-800 border border-gray-200"
                         }`}
                       >
@@ -140,7 +140,7 @@ export function ChatWidget() {
                         <button
                           key={index}
                           onClick={() => handleQuickQuestion(q)}
-                          className="w-full text-left p-2 text-sm bg-white hover:bg-blue-50 border border-gray-200 rounded-lg transition-colors"
+                          className="w-full text-left p-2 text-sm bg-white hover:bg-[#fff9f5] border border-gray-200 rounded-lg transition-colors"
                         >
                           {q}
                         </button>
@@ -168,7 +168,7 @@ export function ChatWidget() {
                     <Button
                       type="submit"
                       disabled={isTyping || !inputMessage.trim()}
-                      className="bg-blue-600 hover:bg-blue-700"
+                      className="bg-[#d44000] hover:bg-[#b83600]"
                     >
                       <Send size={18} />
                     </Button>

@@ -14,27 +14,27 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-blue-600">
+            <a href="/" className="text-2xl font-bold text-[#d44000]">
               Clifton<span className="text-gray-900">.tv</span>
             </a>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/#services" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="/#services" className="text-gray-700 hover:text-[#d44000] transition-colors">
               Services
             </a>
-            <a href="/#testimonials" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="/#testimonials" className="text-gray-700 hover:text-[#d44000] transition-colors">
               Testimonials
             </a>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/about" className="text-gray-700 hover:text-[#d44000] transition-colors">
               About
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/contact" className="text-gray-700 hover:text-[#d44000] transition-colors">
               Contact
             </Link>
             <Link href="/#hero">
-              <Button className="bg-blue-600 hover:bg-blue-700">
+              <Button className="bg-[#d44000] hover:bg-[#b83600]">
                 Get Started
               </Button>
             </Link>
@@ -44,7 +44,7 @@ export function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 p-2"
+              className="text-gray-700 hover:text-[#d44000] p-2"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -58,35 +58,35 @@ export function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a
               href="/#services"
-              className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+              className="block px-3 py-2 text-gray-700 hover:text-[#d44000] hover:bg-gray-50 rounded-md"
               onClick={() => setIsOpen(false)}
             >
               Services
             </a>
             <a
               href="/#testimonials"
-              className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+              className="block px-3 py-2 text-gray-700 hover:text-[#d44000] hover:bg-gray-50 rounded-md"
               onClick={() => setIsOpen(false)}
             >
               Testimonials
             </a>
             <Link
               href="/about"
-              className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+              className="block px-3 py-2 text-gray-700 hover:text-[#d44000] hover:bg-gray-50 rounded-md"
               onClick={() => setIsOpen(false)}
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+              className="block px-3 py-2 text-gray-700 hover:text-[#d44000] hover:bg-gray-50 rounded-md"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>
             <div className="px-3 py-2">
               <Link href="/#hero">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                <Button className="w-full bg-[#d44000] hover:bg-[#b83600]">
                   Get Started
                 </Button>
               </Link>

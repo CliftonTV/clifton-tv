@@ -64,7 +64,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       <Navbar />
 
       {/* Hero Section */}
@@ -76,7 +76,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight"
           >
-            Let's <span className="text-blue-600">Talk Growth</span>
+            Let's <span className="text-[#d44000]">Talk Growth</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -233,7 +233,7 @@ export default function ContactPage() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-lg"
+                      className="w-full h-12 bg-[#d44000] hover:bg-[#b83600] text-lg"
                     >
                       {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
@@ -251,13 +251,13 @@ export default function ContactPage() {
             >
               <Card>
                 <CardHeader>
-                  <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                    <Mail className="h-6 w-6 text-blue-600" />
+                  <div className="h-12 w-12 bg-[#fff5f0] rounded-lg flex items-center justify-center mb-2">
+                    <Mail className="h-6 w-6 text-[#d44000]" />
                   </div>
                   <CardTitle>Email Us</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <a href="mailto:hello@clifton.tv" className="text-blue-600 hover:underline">
+                  <a href="mailto:hello@clifton.tv" className="text-[#d44000] hover:underline">
                     hello@clifton.tv
                   </a>
                   <p className="text-sm text-gray-500 mt-2">

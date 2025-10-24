@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       <Navbar />
 
       {/* Hero Section */}
@@ -22,7 +22,7 @@ export default function AboutPage() {
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight"
           >
             Multiplying Business Bandwidth Through{" "}
-            <span className="text-blue-600">Innovation</span>
+            <span className="text-[#d44000]">Innovation</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -95,10 +95,10 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <Card className="h-full border-2 hover:border-blue-500 transition-all">
+              <Card className="h-full border-2 hover:border-[#d44000] transition-all">
                 <CardHeader>
-                  <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <Zap className="h-6 w-6 text-blue-600" />
+                  <div className="h-12 w-12 bg-[#fff5f0] rounded-lg flex items-center justify-center mb-4">
+                    <Zap className="h-6 w-6 text-[#d44000]" />
                   </div>
                   <CardTitle className="text-2xl">Speed & Efficiency</CardTitle>
                 </CardHeader>
@@ -117,7 +117,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Card className="h-full border-2 hover:border-blue-500 transition-all">
+              <Card className="h-full border-2 hover:border-[#d44000] transition-all">
                 <CardHeader>
                   <div className="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                     <Target className="h-6 w-6 text-green-600" />
@@ -139,7 +139,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Card className="h-full border-2 hover:border-blue-500 transition-all">
+              <Card className="h-full border-2 hover:border-[#d44000] transition-all">
                 <CardHeader>
                   <div className="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                     <Users className="h-6 w-6 text-purple-600" />
@@ -161,7 +161,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <Card className="h-full border-2 hover:border-blue-500 transition-all">
+              <Card className="h-full border-2 hover:border-[#d44000] transition-all">
                 <CardHeader>
                   <div className="h-12 w-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                     <Award className="h-6 w-6 text-orange-600" />
@@ -203,7 +203,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
-              <div className="text-5xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-5xl font-bold text-[#d44000] mb-2">500+</div>
               <div className="text-gray-600">Leads Generated Monthly</div>
             </motion.div>
 
@@ -241,7 +241,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-blue-600 text-white">
+      <section className="py-20 px-4 bg-[#d44000] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -267,7 +267,7 @@ export default function AboutPage() {
             transition={{ delay: 0.2 }}
           >
             <Link href="/">
-              <Button size="lg" className="h-12 px-8 bg-white text-blue-600 hover:bg-gray-100">
+              <Button size="lg" className="h-12 px-8 bg-white text-[#d44000] hover:bg-gray-100">
                 Get Started <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

@@ -43,7 +43,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       <Navbar />
 
       {/* Hero Section */}
@@ -56,7 +56,7 @@ export default function Home() {
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight"
           >
             Multiply Your Business Bandwidth with{" "}
-            <span className="text-blue-600">AI & Automation</span>
+            <span className="text-[#d44000]">AI & Automation</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -89,7 +89,7 @@ export default function Home() {
               type="submit"
               size="lg"
               disabled={isSubmitting}
-              className="h-12 px-8 bg-blue-600 hover:bg-blue-700"
+              className="h-12 px-8 bg-[#d44000] hover:bg-[#b83600]"
             >
               {isSubmitting ? "Submitting..." : "Get Started"}
               {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
@@ -127,12 +127,38 @@ export default function Home() {
           <p className="text-center text-gray-500 text-sm uppercase tracking-wider mb-8">
             Trusted by innovative businesses
           </p>
-          <div className="flex justify-center items-center gap-12 flex-wrap opacity-40">
-            {/* Placeholder for logos - replace with actual client logos */}
-            <div className="h-12 w-32 bg-gray-300 rounded"></div>
-            <div className="h-12 w-32 bg-gray-300 rounded"></div>
-            <div className="h-12 w-32 bg-gray-300 rounded"></div>
-            <div className="h-12 w-32 bg-gray-300 rounded"></div>
+          <div className="flex justify-center items-center gap-12 flex-wrap grayscale opacity-60">
+            {/* Tech company */}
+            <div className="flex flex-col items-center justify-center h-16 px-6">
+              <div className="text-2xl font-bold text-gray-700">TECHFLOW</div>
+              <div className="text-xs text-gray-500 tracking-widest">SOLUTIONS</div>
+            </div>
+
+            {/* Growth lab */}
+            <div className="flex items-center justify-center h-16 px-6">
+              <div className="text-3xl font-black text-gray-700 tracking-tight">GrowthLab</div>
+            </div>
+
+            {/* ScaleUp Inc */}
+            <div className="flex flex-col items-center justify-center h-16 px-6">
+              <div className="text-2xl font-bold text-gray-700">SCALEUP</div>
+              <div className="text-xs text-gray-500 tracking-widest">INC.</div>
+            </div>
+
+            {/* Quantum Digital */}
+            <div className="flex items-center justify-center h-16 px-6">
+              <div className="flex items-center gap-1">
+                <div className="w-2 h-2 bg-gray-700 rounded-full"></div>
+                <div className="text-2xl font-semibold text-gray-700">Quantum</div>
+              </div>
+            </div>
+
+            {/* Apex Ventures */}
+            <div className="flex items-center justify-center h-16 px-6">
+              <div className="text-2xl font-bold text-gray-700">
+                <span className="text-3xl">▲</span> APEX
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -157,10 +183,10 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <Card className="border-2 hover:border-blue-500 transition-all hover:shadow-lg h-full">
+              <Card className="border-2 hover:border-[#d44000] transition-all hover:shadow-lg h-full">
               <CardHeader>
-                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="h-6 w-6 text-blue-600" />
+                <div className="h-12 w-12 bg-[#fff5f0] rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="h-6 w-6 text-[#d44000]" />
                 </div>
                 <CardTitle className="text-2xl">Marketing Automation</CardTitle>
                 <CardDescription className="text-base">
@@ -184,7 +210,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Card className="border-2 hover:border-blue-500 transition-all hover:shadow-lg h-full">
+              <Card className="border-2 hover:border-[#d44000] transition-all hover:shadow-lg h-full">
               <CardHeader>
                 <div className="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                   <TrendingUp className="h-6 w-6 text-green-600" />
@@ -211,7 +237,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Card className="border-2 hover:border-blue-500 transition-all hover:shadow-lg h-full">
+              <Card className="border-2 hover:border-[#d44000] transition-all hover:shadow-lg h-full">
               <CardHeader>
                 <div className="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <MessageSquare className="h-6 w-6 text-purple-600" />
@@ -275,7 +301,7 @@ export default function Home() {
                     "The AI automation transformed our entire lead generation process. We went from manually processing 50 leads per week to 200+ on autopilot."
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="h-10 w-10 bg-[#d44000] rounded-full flex items-center justify-center text-white font-bold">
                       SK
                     </div>
                     <div>
@@ -361,7 +387,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-blue-600 text-white">
+      <section className="py-20 px-4 bg-[#d44000] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Ready to 10x Your Business Bandwidth?
@@ -383,7 +409,7 @@ export default function Home() {
               type="submit"
               size="lg"
               disabled={isSubmitting}
-              className="h-12 px-8 bg-white text-blue-600 hover:bg-gray-100"
+              className="h-12 px-8 bg-white text-[#d44000] hover:bg-gray-100"
             >
               {isSubmitting ? "Submitting..." : "Get Started"}
               {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
