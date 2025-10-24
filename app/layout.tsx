@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Clifton.tv - Multiply Your Business Bandwidth with AI & Automation",
+  title: "clifton.tv - Multiply Your Business Bandwidth with AI & Automation",
   description: "Scale faster, work smarter, and grow revenue with cutting-edge AI automation. Transform your business operations and increase bandwidth without burning out.",
 };
 

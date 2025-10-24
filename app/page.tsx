@@ -43,81 +43,63 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
+    <div className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Hero Section */}
-      <section id="hero" className="px-4 pt-28 pb-16 md:pt-40 md:pb-24">
-        <div className="max-w-6xl mx-auto text-center">
+      {/* Hero Section - Minimal Above the Fold */}
+      <section id="hero" className="flex items-center justify-center min-h-screen px-4 -mt-16">
+        <div className="max-w-3xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-normal text-gray-900 mb-12 leading-tight tracking-tight"
           >
-            Multiply Your Business Bandwidth with{" "}
-            <span className="text-[#d44000]">AI & Automation</span>
+            How do I multiply my business bandwidth?
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto"
-          >
-            Scale faster, work smarter, and grow revenue without burning out.
-            Transform your business operations with cutting-edge automation.
-          </motion.p>
 
           {/* Email Capture */}
           <motion.form
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-6"
+            className="max-w-xl mx-auto"
           >
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              disabled={isSubmitting}
-              className="flex-1 h-12 text-lg"
-            />
-            <Button
-              type="submit"
-              size="lg"
-              disabled={isSubmitting}
-              className="h-12 px-8 bg-[#d44000] hover:bg-[#b83600]"
-            >
-              {isSubmitting ? "Submitting..." : "Get Started"}
-              {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
-            </Button>
+            <div className="relative">
+              <Input
+                type="email"
+                placeholder="Enter your email to learn more"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                disabled={isSubmitting}
+                className="h-14 text-lg pr-32 border-2 border-gray-300 focus:border-[#d44000]"
+              />
+              <Button
+                type="submit"
+                size="lg"
+                disabled={isSubmitting}
+                className="absolute right-1 top-1 h-12 px-6 bg-[#d44000] hover:bg-[#b83600]"
+              >
+                {isSubmitting ? "..." : "Submit"}
+              </Button>
+            </div>
+
+            {message && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`mt-4 p-3 rounded-lg text-sm ${
+                  message.type === 'success'
+                    ? 'bg-green-100 text-green-800'
+                    : 'bg-red-100 text-red-800'
+                }`}
+              >
+                {message.text}
+              </motion.div>
+            )}
           </motion.form>
-
-          {message && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className={`mb-4 p-3 rounded-lg ${
-                message.type === 'success'
-                  ? 'bg-green-100 text-green-800'
-                  : 'bg-red-100 text-red-800'
-              }`}
-            >
-              {message.text}
-            </motion.div>
-          )}
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-sm text-gray-500"
-          >
-            Join hundreds of businesses increasing their operational bandwidth
-          </motion.p>
         </div>
       </section>
 

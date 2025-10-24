@@ -15,7 +15,7 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="text-2xl font-bold text-[#d44000]">
-              Clifton<span className="text-gray-900">.tv</span>
+              clifton.tv
             </a>
           </div>
 
