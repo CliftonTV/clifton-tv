@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,21 +21,23 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="/#services" className="text-gray-700 hover:text-blue-600 transition-colors">
               Services
             </a>
-            <a href="#how-it-works" className="text-gray-700 hover:text-blue-600 transition-colors">
-              How It Works
-            </a>
-            <a href="#testimonials" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="/#testimonials" className="text-gray-700 hover:text-blue-600 transition-colors">
               Testimonials
             </a>
-            <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
               About
-            </a>
-            <Button className="bg-blue-600 hover:bg-blue-700">
-              Get Started
-            </Button>
+            </Link>
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Contact
+            </Link>
+            <Link href="/#hero">
+              <Button className="bg-blue-600 hover:bg-blue-700">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -54,37 +57,39 @@ export function Navbar() {
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a
-              href="#services"
+              href="/#services"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
               onClick={() => setIsOpen(false)}
             >
               Services
             </a>
             <a
-              href="#how-it-works"
-              className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
-              onClick={() => setIsOpen(false)}
-            >
-              How It Works
-            </a>
-            <a
-              href="#testimonials"
+              href="/#testimonials"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
               onClick={() => setIsOpen(false)}
             >
               Testimonials
             </a>
-            <a
-              href="#about"
+            <Link
+              href="/about"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
               onClick={() => setIsOpen(false)}
             >
               About
-            </a>
+            </Link>
+            <Link
+              href="/contact"
+              className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </Link>
             <div className="px-3 py-2">
-              <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                Get Started
-              </Button>
+              <Link href="/#hero">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
