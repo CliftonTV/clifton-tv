@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Zap, TrendingUp, MessageSquare } from "lucide-react";
+import { ArrowRight, Zap, TrendingUp, MessageSquare, Settings, BarChart3, Network } from "lucide-react";
 import { useState } from "react";
 import { Footer } from "@/components/footer";
 import { motion } from "framer-motion";
@@ -54,8 +54,8 @@ export default function Home() {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold italic text-gray-700 mb-6 leading-[1.05] tracking-tighter"
             style={{ fontFamily: 'Candara, sans-serif', wordSpacing: '-0.1em' }}
           >
-            How do I <span className="text-[#d44000]">multiply</span> my business{" "}
-            <span className="text-[#d44000]">bandwidth</span>?
+            Where are the <span className="text-[#d44000]">bottlenecks</span> slowing{" "}
+            <span className="text-[#d44000]">your workflow</span>?
           </motion.h1>
 
           <motion.p
@@ -65,8 +65,8 @@ export default function Home() {
             className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed"
             style={{ fontFamily: 'Candara, sans-serif' }}
           >
-            Discover how AI and automation can transform your business operations,
-            freeing up time and resources to focus on what matters most.
+            We build intelligent systems that identify constraints, automate repetitive work,
+            and multiply your team's capacity—so you can scale without adding headcount.
           </motion.p>
 
           {/* Email Capture */}
@@ -161,15 +161,15 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              How We Increase Your Bandwidth
+              How We Eliminate Your Bottlenecks
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Three proven pillars to automate, optimize, and amplify your business growth
+              Custom systems that remove constraints and multiply your team's output
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Service 1: Marketing Automation */}
+            {/* Service 1: Process Automation */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -179,24 +179,24 @@ export default function Home() {
               <Card className="border-2 hover:border-[#d44000] transition-all hover:shadow-lg h-full">
               <CardHeader>
                 <div className="h-12 w-12 bg-[#fff5f0] rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="h-6 w-6 text-[#d44000]" />
+                  <Settings className="h-6 w-6 text-[#d44000]" />
                 </div>
-                <CardTitle className="text-2xl">Marketing Automation</CardTitle>
+                <CardTitle className="text-2xl">Process Automation</CardTitle>
                 <CardDescription className="text-base">
-                  AI-powered marketing systems that run 24/7
+                  Eliminate repetitive tasks that drain your team's time
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Streamline your entire marketing funnel with intelligent automation.
-                  From lead generation to nurturing, let AI handle the heavy lifting
-                  while you focus on strategic growth.
+                  We identify manual bottlenecks in your workflows and build intelligent
+                  automation systems. From data entry to customer onboarding, free your
+                  team from repetitive work and reclaim hundreds of hours per month.
                 </p>
               </CardContent>
             </Card>
             </motion.div>
 
-            {/* Service 2: Paid Advertising */}
+            {/* Service 2: Data & Decision Systems */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -206,24 +206,24 @@ export default function Home() {
               <Card className="border-2 hover:border-[#d44000] transition-all hover:shadow-lg h-full">
               <CardHeader>
                 <div className="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="h-6 w-6 text-green-600" />
+                  <BarChart3 className="h-6 w-6 text-green-600" />
                 </div>
-                <CardTitle className="text-2xl">Sales Funnel Optimization</CardTitle>
+                <CardTitle className="text-2xl">Data & Decision Systems</CardTitle>
                 <CardDescription className="text-base">
-                  Data-driven strategies that convert and scale
+                  Turn information chaos into actionable intelligence
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Partner with experts to create high-converting funnels and advertising
-                  campaigns. Maximize ROI with proven strategies and real-time optimization
-                  powered by AI analytics.
+                  Break through information bottlenecks with AI-powered analytics and
+                  reporting systems. Get real-time insights, automated dashboards, and
+                  intelligent alerts that help you make faster, better decisions.
                 </p>
               </CardContent>
             </Card>
             </motion.div>
 
-            {/* Service 3: Communication & Copy */}
+            {/* Service 3: Integration & Orchestration */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -233,18 +233,18 @@ export default function Home() {
               <Card className="border-2 hover:border-[#d44000] transition-all hover:shadow-lg h-full">
               <CardHeader>
                 <div className="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                  <MessageSquare className="h-6 w-6 text-purple-600" />
+                  <Network className="h-6 w-6 text-purple-600" />
                 </div>
-                <CardTitle className="text-2xl">AI-Powered Communication</CardTitle>
+                <CardTitle className="text-2xl">Integration & Orchestration</CardTitle>
                 <CardDescription className="text-base">
-                  Copywriting and messaging at machine speed
+                  Connect siloed tools into a unified workflow
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Generate compelling copy, automate customer communications, and maintain
-                  consistent brand voice across all channels. Let AI handle routine messaging
-                  while you focus on relationships.
+                  Stop wasting time on manual data transfers between disconnected systems.
+                  We build intelligent integrations that orchestrate your tools, sync data
+                  in real-time, and create seamless end-to-end workflows.
                 </p>
               </CardContent>
             </Card>
@@ -266,7 +266,7 @@ export default function Home() {
               Real Results from Real Businesses
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              See how we've helped companies multiply their bandwidth and accelerate growth
+              See how we've eliminated bottlenecks and transformed workflows across industries
             </p>
           </motion.div>
 
@@ -287,11 +287,11 @@ export default function Home() {
                       </svg>
                     ))}
                   </div>
-                  <CardTitle className="text-xl">Increased leads by 400%</CardTitle>
+                  <CardTitle className="text-xl">Eliminated 80% of manual data entry</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">
-                    "The AI automation transformed our entire lead generation process. We went from manually processing 50 leads per week to 200+ on autopilot."
+                    "The custom workflow they built removed our biggest bottleneck. Our team was drowning in spreadsheets—now everything syncs automatically across all our systems."
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="h-10 w-10 bg-[#d44000] rounded-full flex items-center justify-center text-white font-bold">
@@ -322,11 +322,11 @@ export default function Home() {
                       </svg>
                     ))}
                   </div>
-                  <CardTitle className="text-xl">Saved 20 hours per week</CardTitle>
+                  <CardTitle className="text-xl">Reduced response time from days to minutes</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">
-                    "The marketing automation freed up our entire team. We redirected that time into strategic growth and product development. Game changer."
+                    "The integration system they built connected our CRM, support desk, and billing. What used to take 3-5 days now happens instantly. Our customers notice the difference."
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="h-10 w-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">
@@ -357,11 +357,11 @@ export default function Home() {
                       </svg>
                     ))}
                   </div>
-                  <CardTitle className="text-xl">3x ROI on ad spend</CardTitle>
+                  <CardTitle className="text-xl">Scaled operations without hiring</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">
-                    "Our funnel optimization and AI-powered targeting tripled our advertising ROI in just 3 months. The results speak for themselves."
+                    "Their AI systems gave us the capacity of 5 additional employees. We doubled revenue without expanding our team—the automation handles what used to require full-time staff."
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="h-10 w-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">
@@ -383,10 +383,10 @@ export default function Home() {
       <section className="py-20 px-4 bg-[#d44000] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Ready to 10x Your Business Bandwidth?
+            Ready to Eliminate Your Workflow Bottlenecks?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join the AI automation revolution. Start scaling smarter today.
+            Let's build the systems that multiply your team's capacity. Start your workflow audit today.
           </p>
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4">
             <Input
