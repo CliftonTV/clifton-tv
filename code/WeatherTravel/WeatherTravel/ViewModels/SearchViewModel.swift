@@ -24,27 +24,20 @@ class SearchViewModel: ObservableObject {
         originData = nil
         destinationData = nil
 
-        do {
-            async let originResult: CityData? = {
-                if !originQuery.isEmpty {
-                    return try await weatherService.searchCity(originQuery)
-                }
-                return nil
-            }()
+        // Capture values before async work to avoid actor isolation issues
+        let originSearchQuery = originQuery
+        let destinationSearchQuery = destinationQuery
 
-            async let destinationResult: CityData? = {
-                if !destinationQuery.isEmpty {
-                    return try await weatherService.searchCity(destinationQuery)
-                }
-                return nil
-            }()
+        do {
+            async let originResult: CityData? = originSearchQuery.isEmpty ? nil : weatherService.searchCity(originSearchQuery)
+            async let destinationResult: CityData? = destinationSearchQuery.isEmpty ? nil : weatherService.searchCity(destinationSearchQuery)
 
             let (origin, destination) = try await (originResult, destinationResult)
 
-            if !originQuery.isEmpty && origin == nil {
-                errorMessage = "Could not find location: \(originQuery)"
-            } else if !destinationQuery.isEmpty && destination == nil {
-                errorMessage = "Could not find location: \(destinationQuery)"
+            if !originSearchQuery.isEmpty && origin == nil {
+                errorMessage = "Could not find location: \(originSearchQuery)"
+            } else if !destinationSearchQuery.isEmpty && destination == nil {
+                errorMessage = "Could not find location: \(destinationSearchQuery)"
             }
 
             originData = origin
