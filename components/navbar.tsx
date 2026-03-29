@@ -21,6 +21,9 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            <Link href="/travel" className="text-gray-700 hover:text-[#d44000] transition-colors">
+              Travel & Weather
+            </Link>
             <a href="/#services" className="text-gray-700 hover:text-[#d44000] transition-colors">
               Services
             </a>
@@ -56,6 +59,13 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1">
+            <Link
+              href="/travel"
+              className="block px-3 py-2 text-gray-700 hover:text-[#d44000] hover:bg-gray-50 rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Travel & Weather
+            </Link>
             <a
               href="/#services"
               className="block px-3 py-2 text-gray-700 hover:text-[#d44000] hover:bg-gray-50 rounded-md"
